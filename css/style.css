@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Cardo", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    margin: 0 0rem;
+    text-decoration: none;
+    color: blue;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: min-content;
+}
+
+.links {
+    white-space: nowrap;
+}
+
+.description {
+    margin: 10;
+    text-align: justify;
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
