@@ -1,0 +1,50 @@
+<!-- navbar.html -->
+<nav class="bg-white">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="flex h-16 items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html" class="text-2xl font-bold font-logo">Carl Thibault</a>
+      </div>
+
+      <!-- Desktop menu -->
+      <div class="hidden sm:flex space-x-8">
+        <a href="index.html"
+          class="navbar-menu-font text-gray-800 hover:text-black pb-1 border-b-2 border-transparent hover:border-black transition">À
+          propos</a>
+        <a href="projects.html"
+          class="navbar-menu-font text-gray-800 hover:text-black pb-1 border-b-2 border-transparent hover:border-black transition">Projets</a>
+        <!-- <a href="blogs.html" class="text-gray-800 hover:text-black pb-1 border-b-2 border-transparent hover:border-black transition">Blogs</a> -->
+        <a href="./pdfs/CarlThibault_CV.pdf"
+          class="navbar-menu-font text-gray-800 hover:text-black pb-1 border-b-2 border-transparent hover:border-black transition">CV</a>
+        <a href="contact.html"
+          class="navbar-menu-font text-gray-800 hover:text-black pb-1 border-b-2 border-transparent hover:border-black transition">Contact</a>
+      </div>
+
+      <!-- Mobile hamburger button -->
+      <!-- Will appear on smaller screens -->
+      <div class="sm:hidden">
+        <button id="menu-btn"
+          class="w-8 h-8 p-2 text-gray-700 hover:bg-gray-100 rounded-md text-2xl flex items-center justify-center leading-none">
+          <span id="icon-open">=</span>
+          <span id="icon-close" class="hidden -translate-y-[4px]">⁕</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="sm:hidden hidden px-10 pb-3 space-y-2 ">
+    <a href="index.html" class="block navbar-menu-font text-gray-800 hover:text-black pb-1 border-b border-gray-200">À
+      propos</a>
+    <a href="projects.html"
+      class="block navbar-menu-font text-gray-800 hover:text-black pb-1 border-b border-gray-200">Projets</a>
+    <!-- <a href="blogs.html" class="block text-gray-800 hover:text-black pb-1 border-b border-gray-200">Blogs</a> -->
+    <a href="./pdfs/CarlThibault_CV.pdf"
+      class="block navbar-menu-font text-gray-800 hover:text-black pb-1 border-b border-gray-200">CV</a>
+    <a href="contact.html"
+      class="block navbar-menu-font text-gray-800 hover:text-black pb-1 border-b border-gray-200">Contact</a>
+  </div>
+</nav>

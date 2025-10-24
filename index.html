@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carl Thibault</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400" rel="stylesheet"> -->
+    <title>Carl Thibault - À propos</title>
 </head>
-<body>
-    <h1>Carl Thibault</h1>
-    <div class="container">
-        <div class="links">
-            ░&nbsp&nbsp&nbsp&nbsp
-            <a href="https://www.linkedin.com/in/thibault-carl/">LinkedIn</a> 
-            &nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp
-            <a href="https://github.com/lalogiquefloue">GitHub</a> 
-            &nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp
-            <a href="https://bsky.app/profile/lalogiquefloue.bsky.social">Bluesky</a> 
-            <!-- &nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp
-            <a href="">CV</a> -->
-            &nbsp&nbsp&nbsp&nbsp░
+
+<body class="bg-white text-black">
+    <!-- NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- PAGE CONTENT -->
+    <div class="mx-auto max-w-7xl px-6">
+
+        <h1 class="content-title text-lg font-semibold my-6">À propos</h1>
+
+        <div class="content-description max-w-3xl text-justify">
+            <p>
+                Éternel curieux, formé en architecture et réorienté en informatique, mon parcours atypique m’amène à
+                conjuguer créativité, esprit d’abstraction, rigueur technique et humanisme dans la résolution de
+                problèmes. Habitué à travailler dans des environnements pluridisciplinaires, je sais m’adapter
+                rapidement, dialoguer avec des profils variés et valoriser la complémentarité des expertises. Je cherche
+                à contribuer à des projets à impact social positif.
+            </p>
         </div>
-        <p class="description">
-            Éternel curieux, formé en architecture et réorienté en informatique, mon parcours atypique m’amène à conjuguer créativité, esprit d’abstraction, rigueur technique et humanisme dans la résolution de problèmes. Habitué à travailler dans des environnements pluridisciplinaires, je sais m’adapter rapidement, dialoguer avec des profils variés et valoriser la complémentarité des expertises.
-        </p>
+
     </div>
+
+    <!-- LOAD NAVBAR -->
+    <script type="module">
+        import { loadNavbar } from './scripts/navbar.js';
+        loadNavbar();
+    </script>
+
 </body>
+
 </html>

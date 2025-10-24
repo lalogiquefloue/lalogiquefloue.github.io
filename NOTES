@@ -1,0 +1,2 @@
+Command to generate Tailwind CSS file output
+npx @tailwindcss/cli -i ./css/input.css -o ./css/style.css --watch
