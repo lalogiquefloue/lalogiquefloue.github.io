@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+    .font-logo {
+        font-family: "Cardo", serif;
+        font-style: normal;
+    }
+
+    .navbar-menu-font {
+        font-family: "Cardo", serif;
+        font-style: normal;
+    }
+
+    .content-title {
+        font-family: "Cardo", serif;
+        font-style: normal;
+    }
+
+    .content-description {
+        font-family: "Cardo", serif;
+        font-style: normal;
+    }
+
+    .content-link {
+        font-family: "Cardo", serif;
+        font-style: normal;
+    }
+}
