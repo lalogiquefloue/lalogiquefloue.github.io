@@ -26,12 +26,4 @@
         font-family: "Cardo", serif;
         font-style: normal;
     }
-
-    .ascii-art {
-        font-family: monospace;
-        white-space: pre;
-        font-size: 6px;
-        line-height: 8px;
-        overflow-x: auto;
-    }
 }
