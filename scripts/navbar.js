@@ -1,39 +1,40 @@
-export function loadNavbar() {
-    fetch('./navbar.html')
-        .then(response => {
-            if (!response.ok) throw new Error("Navbar not found");
-            return response.text();
-        })
-        .then(data => {
-            const navBar = document.getElementById('navbar-placeholder');
-            navBar.innerHTML = data;
+export async function loadNavbar() {
+    let navbarHTML = localStorage.getItem("NAVBAR_HTML");
 
-            requestAnimationFrame(() => {
-                // Menu toggle logic
-                const menuBtn = document.getElementById("menu-btn");
-                const mobileMenu = document.getElementById("mobile-menu");
-                const iconOpen = document.getElementById("icon-open");
-                const iconClose = document.getElementById("icon-close");
+    // cache navbar HTML if not already in local storage
+    if (!navbarHTML) {
+        const response = await fetch("./navbar.html");
+        if (!response.ok) throw new Error("Navbar not found");
+        navbarHTML = await response.text();
+        localStorage.setItem(cacheKey, navbarHTML);
+    }
 
-                if (menuBtn) {
-                    menuBtn.addEventListener("click", () => {
-                        mobileMenu.classList.toggle("hidden");
-                        iconOpen.classList.toggle("hidden");
-                        iconClose.classList.toggle("hidden");
-                    });
-                }
+    const navBar = document.getElementById("navbar-placeholder");
+    navBar.innerHTML = navbarHTML;
 
-                // Highlight current page
-                const navLinks = navBar.querySelectorAll('nav a');
-                const currentPath = window.location.pathname.split("/").pop() || 'index.html';
+    requestAnimationFrame(() => {
+        // Menu logic
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const iconOpen = document.getElementById("icon-open");
+        const iconClose = document.getElementById("icon-close");
 
-                navLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === currentPath) {
-                        link.classList.add('border-black', 'font-bold');
-                    }
-                });
+        if (menuBtn) {
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+                iconOpen.classList.toggle("hidden");
+                iconClose.classList.toggle("hidden");
             });
-        })
-        .catch(err => console.error(err));
+        }
+
+        // Highlight current page
+        const navLinks = navBar.querySelectorAll("nav a");
+        const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("border-black", "font-bold");
+            }
+        });
+    });
 }
