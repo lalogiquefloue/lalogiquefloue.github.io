@@ -8,30 +8,31 @@ export function loadNavbar() {
             const navBar = document.getElementById('navbar-placeholder');
             navBar.innerHTML = data;
 
-            // Menu toggle script
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const iconOpen = document.getElementById("icon-open");
-            const iconClose = document.getElementById("icon-close");
+            requestAnimationFrame(() => {
+                // Menu toggle logic
+                const menuBtn = document.getElementById("menu-btn");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const iconOpen = document.getElementById("icon-open");
+                const iconClose = document.getElementById("icon-close");
 
-            if (menuBtn) {
-                menuBtn.addEventListener("click", () => {
-                    mobileMenu.classList.toggle("hidden");
-                    iconOpen.classList.toggle("hidden");
-                    iconClose.classList.toggle("hidden");
-                });
-            }
+                if (menuBtn) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                        iconOpen.classList.toggle("hidden");
+                        iconClose.classList.toggle("hidden");
+                    });
+                }
 
-            // Highlight current page (desktop + mobile)
-            const navLinks = navBar.querySelectorAll('nav a');
-            const currentPath = window.location.pathname.split("/").pop() || 'index.html';
-            // console.log(currentPath);
+                // Highlight current page
+                const navLinks = navBar.querySelectorAll('nav a');
+                const currentPath = window.location.pathname.split("/").pop() || 'index.html';
 
-            navLinks.forEach(link => {
+                navLinks.forEach(link => {
                 const href = link.getAttribute('href');
                 if (href === currentPath) {
-                    link.classList.add('border-black', 'font-bold');
-                }
+                        link.classList.add('border-black', 'font-bold');
+                    }
+                });
             });
         })
         .catch(err => console.error(err));
