@@ -20,14 +20,11 @@
   <!-- PAGE CONTENT -->
   <div class="mx-auto max-w-7xl px-6">
     <h1 class="content-title text-lg font-semibold my-6">Projets</h1>
-    <div class="content-description max-w-3xl text-justify">
-      <p>/!\ Page en construction /!\</p>
-      <p>Voir sur <a href="https://github.com/lalogiquefloue"
-          class="content-link font-medium text-blue-600 dark:text-blue-500 hover:underline">GitHub</a>.</p>
-    </div>
+    <div id="projects-container" data-json="./projects/projects.json"></div>
+    <script src="scripts/projects.js"></script>
   </div>
 
-  <!-- Load navbar.js as a module -->
+    <!-- LOAD NAVBAR -->
   <script type="module">
     import { loadNavbar } from './scripts/navbar.js';
     loadNavbar();
