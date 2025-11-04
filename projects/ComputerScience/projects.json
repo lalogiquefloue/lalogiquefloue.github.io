@@ -1,9 +1,11 @@
 [
     {
         "title": "ESP32 Sensor Dashboard",
-        "description": "<p>Système de suivi et de visualisation de données environnementales basé sur un microcontrôleur <strong>ESP32</strong> et un capteur <strong>DHT22</strong>. Le firmware, écrit en C++ (Arduino), lit la température et l’humidité, puis envoie ces mesures à un serveur développé en <strong>Go</strong> pour stockage et visualisation.</p><br><p>Le backend expose une API REST et enregistre les données dans une base de donnée <strong>InfluxDB</strong>. Une interface web développée en <strong>React</strong> et <strong>TypeScript</strong> permet de consulter les mesures en temps réel et l’historique des données via des graphiques de visualisation, le tout orchestré via <strong>Docker</strong> pour un déploiement simplifié.</p>",
+        "description": "<p>Système de suivi et de visualisation de données environnementales basé sur un microcontrôleur <strong>ESP32</strong> et un capteur <strong>DHT22</strong>. Le firmware, écrit en <strong>C++ (Arduino)</strong>, lit la température et l'humidité, puis envoie ces mesures à un serveur développé en <strong>Go</strong> pour stockage et visualisation.</p><br><p>Le backend expose une <strong>API REST</strong> et enregistre les données dans une <strong>base de donnée InfluxDB</strong>. Une interface web développée en <strong>React</strong> et <strong>TypeScript</strong> permet de consulter les mesures en temps réel et l'historique des données via des graphiques de visualisation, le tout orchestré via <strong>Docker</strong> pour un déploiement local et accessible via un VPN.</p>",
         "images": [
-            "projects/ComputerScience/ESP32SensorDashboard/sensor.jpg"
+            "projects/ComputerScience/ESP32SensorDashboard/sensor_1000px.jpg",
+            "projects/ComputerScience/ESP32SensorDashboard/dashboard.png",
+            "projects/ComputerScience/ESP32SensorDashboard/graph.png"
         ],
         "tags": [
             "Projet personnel (En cours)",
@@ -20,7 +22,7 @@
     },
     {
         "title": "Fedora Init Setup script",
-        "description": "<p>Script bash automatisant la configuration initiale d’un système Fedora Linux selon les spécifications déterminées (listes de packages DNF et Flatpaks facile à modifier selon les besoins). Il permet d’installer rapidement les dépôts essentiels (RPM Fusion, Flathub), de mettre à jour le système, d’ajouter des outils de développement, ainsi que divers logiciels utilitaires (Tailscale, codecs multimédias).</p>",
+        "description": "<p>Script bash automatisant la configuration initiale d'un système Fedora Linux selon des spécifications déterminées (listes de packages DNF et Flatpaks facile à modifier selon les besoins). Il permet d'installer rapidement les dépôts essentiels (RPM Fusion, Flathub), de mettre à jour le système, d'ajouter des outils de développement via des procédures prédéfinies, ainsi que divers logiciels utilitaires (Tailscale, codecs multimédias).</p>",
         "images": [
             "projects/ComputerScience/FedoraInitScript/fedora-init-script.png"
         ],
@@ -35,7 +37,7 @@
     },
     {
         "title": "Raytracer: IFT3355 - Infographie",
-        "description": "<p>Projet académique de rendu d’images 3D par lancer de rayons, développé en C++ dans le cadre du cours IFT3355 – Infographie. L’application génère des scènes à partir de modèles géométriques, de sources lumineuses et de matériaux variés (diffus, spéculaires, transparents). Le moteur calcule les intersections rayons-objets et applique le shading pour produire des rendus réalistes.</p><br><p>Le projet met l’accent sur la modélisation mathématique des vecteurs et leurs intersections, la gestion récursive des réflexions et réfractions, ainsi que sur l’optimisation du temps de calcul à l’aide de structures de données et d’algorithmes adaptés (AABB, BVH).</p>",
+        "description": "<p>Projet académique de rendu d'images 3D par lancer de rayons, développé en <strong>C++</strong> dans le cadre du cours IFT3355 - Infographie. L'application génère des scènes à partir de modèles géométriques, de sources lumineuses et de matériaux variés (diffus, spéculaires, transparents). Le moteur calcule les intersections rayons-objets et applique le shading pour produire des rendus réalistes.</p><br><p>Le projet met l'accent sur la modélisation mathématique des vecteurs et leurs intersections, la gestion récursive des réflexions et réfractions, ainsi que sur l'optimisation du temps de calcul à l'aide de structures de données et d'algorithmes adaptés (AABB, BVH).</p>",
         "images": [
             "projects/ComputerScience/Raytracer/sphere_color.png",
             "projects/ComputerScience/Raytracer/texture_color.png",
@@ -49,7 +51,7 @@
     },
     {
         "title": "Gestionnaire d'utilisateurs (stack MERN): IFT3225 - Technologie de l'Internet",
-        "description": "<p>Projet académique développé dans le cadre du cours <strong>IFT3225 – Technologie de l’Internet</strong>, utilisant la stack <strong>MERN</strong> (MongoDB, Express.js, React.js, Node.js). L'application permet la gestion complète de profils utilisateurs : création, modification, suppression et consultation sécurisée des comptes.</p><br><p>Les mots de passe sont <strong>chiffrés</strong> dans la base de données MongoDB et l'authentification distingue deux types de profils : utilisateurs et administrateurs. Seuls les administrateurs peuvent accéder à certaines fonctionnalités (suppression de comptes, lecture de tous les utilisateurs), tandis que les utilisateurs peuvent consulter et modifier uniquement leur propre profil.</p><br><p>L’interface, développée en <strong>React</strong>, inclut deux formulaires principaux : un pour créer un utilisateur avec vérification de l’adresse courriel via une API externe et génération de mot de passe aléatoire, et un second pour supprimer un utilisateur en affichant ses informations. Toutes les interactions avec le backend se font via des <strong>routes REST</strong> (POST, GET, PUT, DELETE) avec retour au format JSON. Une page de documentation intégrée présente l’ensemble des routes et leur utilisation pour chaque type de profil.</p><br><p>Le projet met en avant la conception d’une architecture web sécurisée, la communication client-serveur via Node.js/Express et la gestion efficace des données dans MongoDB.</p>",
+        "description": "<p>Projet académique développé dans le cadre du cours IFT3225 - Technologie de l'Internet, utilisant la <strong>stack MERN</strong>. L'application permet la gestion complète de profils utilisateurs : création, modification, suppression et consultation sécurisée des comptes. Les mots de passe sont chiffrés dans la base de données MongoDB et l'authentification distingue deux types de profils : utilisateurs et administrateurs.</p><br><p>L'interface est développée en <strong>React</strong> et toutes les interactions avec le backend se font via des requêtes asynchrones vers un <strong>API REST</strong>. Une page de documentation intégrée présente l'ensemble des routes et leur utilisation pour chaque type de profil. Le projet met en avant la conception d'une architecture web sécurisée, la communication client-serveur via Node.js/Express et la gestion des données dans MongoDB.</p>",
         "images": [
             "projects/ComputerScience/IFT3225_MERN/routes.png"
         ],
@@ -58,13 +60,14 @@
             "React.js",
             "Express.js",
             "MongoDB",
-            "Node.js"
+            "Node.js",
+            "JSON Web Token"
         ],
         "link": {}
     },
     {
         "title": "Gestionnaire de tâches (stack LAMP): IFT3225 - Technologie de l'Internet",
-        "description": "<p>Projet académique développé dans le cadre du cours <strong>IFT3225 – Technologie de l’Internet</strong>. L’application web, construite sur la stack <strong>LAMP</strong>, permet la gestion complète de tâches sous forme de tuiles dynamiques: création, modification, suppression et affichage en temps réel grâce à des <strong>requêtes asynchrones</strong>.</p><br><p>Le système inclut une <strong>authentification sécurisée</strong> (inscription, connexion, hachage des mots de passe) et un <strong>filtrage</strong> des tâches par critères (titre, catégorie, utilisateur, date). L’interface, conçue en <strong>HTML5</strong>, <strong>CSS3</strong> et <strong>Bootstrap</strong>, s’adapte à toutes les tailles d’écran et intègre une <strong>pagination</strong> pour limiter l’affichage à 15 éléments par page.</p><br><p>Les données sont stockées dans une base <strong>MySQL</strong> et les interactions entre le frontend et le backend se font sans rechargement de page, offrant une expérience fluide et collaborative. Le projet met en avant la conception d’une architecture web avec communication client-serveur via PHP et JSON.</p>",
+        "description": "<p>Projet académique développé dans le cadre du cours IFT3225 - Technologie de l'Internet utilisant la <strong>stack LAMP</strong>. L'application web permet la gestion complète de tâches sous forme de tuiles dynamiques: création, modification, suppression et affichage en temps réel grâce à des requêtes asynchrones.</p><br><p>Le système inclut une <strong>authentification sécurisée</strong> (inscription, connexion, hachage des mots de passe) et un filtrage des tâches par critères (titre, catégorie, utilisateur, date). L'interface s'adapte dynamiquement à toutes les tailles d'écran et intègre une pagination pour limiter l'affichage à 15 éléments par page.</p><br><p>Les données sont stockées dans une base de donnée <strong>MySQL</strong> et les interactions entre le frontend et le backend se font sans rechargement de page. Le projet met en avant la conception d'une architecture web avec communication client-serveur via <strong>PHP</strong>.</p>",
         "images": [
             "projects/ComputerScience/IFT3225_LAMP/tiles.png"
         ],
