@@ -1,5 +1,6 @@
 export async function loadNavbar() {
-    const cacheKey = "NAVBAR_HTML";
+    const NAVBAR_VERSION = "20260112";
+    const cacheKey = `NAVBAR_HTML_${NAVBAR_VERSION}`;
     let navbarHTML = localStorage.getItem(cacheKey);
     
     // cache navbar HTML if not already in local storage
