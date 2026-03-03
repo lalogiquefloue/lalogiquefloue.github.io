@@ -36,6 +36,22 @@
         }
     },
     {
+        "title": "AleaCLI",
+        "description": "<p>Projet personnel né d'une volonté de comprendre les algorithmes de génération de nombres aléatoires. Un \"cabinet des curiosités\" rassemble ainsi mes implémntations d'algorithmes de PRNG sous une même interface unifiée.</p>",
+        "images": [
+            "projects/computer-science/AleaCLI/xorshift.png"
+        ],
+        "tags": [
+            "Projet personnel (En cours)",
+            "C",
+            "Makefile",
+            "RNG"
+        ],
+        "link": {
+            "Github": "https://github.com/lalogiquefloue/aleacli"
+        }
+    },
+    {
         "title": "Raytracer: IFT3355 - Infographie",
         "description": "<p>Projet académique de rendu d'images 3D par lancer de rayons, développé en <strong>C++</strong> dans le cadre du cours IFT3355 - Infographie. L'application génère des scènes à partir de modèles géométriques, de sources lumineuses et de matériaux variés (diffus, spéculaires, transparents). Le moteur calcule les intersections rayons-objets et applique le shading pour produire des rendus réalistes.</p><br><p>Le projet met l'accent sur la modélisation mathématique des vecteurs et leurs intersections, la gestion récursive des réflexions et réfractions, ainsi que sur l'optimisation du temps de calcul à l'aide de structures de données et d'algorithmes adaptés (AABB, BVH).</p>",
         "images": [
